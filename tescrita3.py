@@ -89,6 +89,8 @@ empresa_de_prova = {
 def comptar_empleats_per_departament(empresa):
     # El teu codi aqui
     departaments = {}
+    if not empresa:
+        return {}
     for departament in empresa["departaments"]:
         departaments[departament["nom"]] = len(departament["empleats"])
     return departaments
